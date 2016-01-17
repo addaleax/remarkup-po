@@ -1,0 +1,46 @@
+{
+  "name": "remarkup-po",
+  "version": "0.1.0",
+  "description": "HTML semantics and program logic separator (for pofiles)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/addaleax/remarkup-po.git"
+  },
+  "keywords": [
+    "html",
+    "xml",
+    "program",
+    "logic",
+    "translate",
+    "translation",
+    "translating",
+    "separation",
+    "pofile",
+    "po"
+  ],
+  "author": "Anna Henningsen <sqrt@entless.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/addaleax/remarkup-po/issues"
+  },
+  "homepage": "https://github.com/addaleax/remarkup-po#readme",
+  "dependencies": {
+    "fast-levenshtein": "^1.1.0",
+    "minimist": "^1.2.0",
+    "munkres-js": "^1.1.3",
+    "pofile": "^1.0.2",
+    "remarkup": "^0.1.0"
+  },
+  "devDependencies": {
+    "coveralls": "*",
+    "istanbul": "*",
+    "mocha": "*"
+  },
+  "bin": {
+    "remarkup-po": "./bin/cli.js"
+  }
+}

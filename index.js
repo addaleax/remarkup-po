@@ -1,6 +1,6 @@
 'use strict';
 
-const levenshtein = require('fast-levenshtein');
+const levenshtein = require('levenshtein-sse');
 const pofile = require('pofile');
 const ReMarkup = require('remarkup');
 const munkres = require('munkres-js');
@@ -50,7 +50,7 @@ exports.remarkup = function(potInput, poInput) {
     const potMsgID = rm.unMarkup(stripTabs(pot.items[i].msgid));
     
     for (let j = 0; j < po.items.length; ++j)
-      distanceMatrix[i][j] = levenshtein.get(potMsgID, po.items[j].msgid);
+      distanceMatrix[i][j] = levenshtein(potMsgID, po.items[j].msgid);
   }
   
   const m = new munkres.Munkres();
